@@ -1,0 +1,52 @@
+body
+{
+	background-image: url("/C:/Users/bened/Documents/Star_Wars_Quiz/img/background.jpg");
+}
+
+
+table
+{
+	width: 99%;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+tr
+{
+	max-height: 195px;
+}
+
+td
+{
+	max-width: 20px;
+}
+
+img
+{
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height:195px;
+	transition: transform .3s ease;
+}
+
+img:hover
+{
+	filter: opacity(80%);
+	transform: scale(105%);
+}
+
+
+
+
+
+
+
+
+
+
+
