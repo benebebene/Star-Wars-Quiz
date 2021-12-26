@@ -1,3 +1,8 @@
+
+import {questions} from 'questions_aoc.js';
+var questions = questions;
+
+
 function Quiz(questions)
 {
 	this.score = 0;
@@ -218,10 +223,6 @@ function color(table)
 	}
 };
 
-
-
-import {questions} from 'questions_aoc.js';
-var questions = questions;
 
 
 var choicesArr = [];
