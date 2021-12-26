@@ -1,5 +1,3 @@
-import * as q from './questions_aoc.js';
-
 function Quiz(questions)
 {
 	this.score = 0;
@@ -138,7 +136,7 @@ function guess(id)
 	var button = document.getElementById(id);
 	button.onclick = function ()
 	{
-		for(i = 1; i < choices.length + 1; i++)
+		for(var i = 1; i < choices.length + 1; i++)
 		{
 			document.getElementById("choice0" + i).style.boxShadow = "none";
 			var input = document.getElementById("qchoice0" + i);
@@ -222,8 +220,9 @@ function color(table)
 
 
 
+import {questions} from 'questions_aoc.js';
+var questions = questions;
 
-var questions = q.questions;
 
 var choicesArr = [];
 
