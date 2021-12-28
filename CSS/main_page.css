@@ -1,8 +1,9 @@
-body
+html
 {
-	background-image: url("/C:/Users/bened/Documents/Star_Wars_Quiz/img/background.jpg");
+	background-image: url(../img/background.jpg);
+	background-repeat: repeat-y;
+	background-size: cover;
 }
-
 
 table
 {

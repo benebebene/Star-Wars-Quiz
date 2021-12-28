@@ -1,7 +1,4 @@
-
-import {questions} from 'questions_aoc.js';
-
-
+import {questions} from './questions/questions_rots.js';
 
 function Quiz(questions)
 {
@@ -59,14 +56,14 @@ function fill()
 			var temp = i+1;
 			
 			var elem = document.getElementById("choice0" + temp);
+            var elem2 = document.getElementById("qchoice0" + temp);
+            elem2.checked = false;
 			elem.style.borderColor = "#444";
-			
-			//document.querySelector('input[name="qchoice"]:checked').style.borderColor = "black";
 			elem.innerHTML = choices[i];	
 			document.getElementById("qchoice0" + temp).setAttribute('value', choices[i]);
-			check("check");
-			guess("next");
 			
+            check("check");
+			guess("next");
 		}
 		
 		showProgress();
@@ -80,10 +77,7 @@ function fill()
 		else
 		{
 			nextButton.innerHTML = "Nächste Frage";
-		}
-		
-		
-		
+		}		
 	}
 };
 
@@ -97,8 +91,7 @@ function check(id)
 {
 	var button = document.getElementById(id);
 	button.onclick = function ()
-	{
-		
+	{		
 		var choices = quiz.getQuestionIndex().choices;
 		var selected = document.querySelector('input[name="qchoice"]:checked').value;
 		if(quiz.getQuestionIndex().correctAnswer(selected))
@@ -133,10 +126,8 @@ function check(id)
 	}
 };
 
-
 function guess(id)
-{
-	
+{	
 	var choices = quiz.getQuestionIndex().choices;
 	var button = document.getElementById(id);
 	button.onclick = function ()
@@ -150,8 +141,7 @@ function guess(id)
 		var selected = document.querySelector('input[name="qchoice"]:checked').value;
 		choice(selected);
 		quiz.guess(selected);
-		fill();
-		
+		fill();		
 	}
 };
 
@@ -162,11 +152,9 @@ function showProgress()
 	elem.innerHTML = "Frage " + currQNumber + " von " + quiz.questions.length;
 };
 
-
-
 function showScore()
 {
-	var end = "<h1>Ergebnis</h2>";
+	var end = "<div class='space'><div class='space'></div><div class='space'></div><h1>Ergebnis</h2>";
 	var max = quiz.questions.length * 100;
 	end += "<h2 id='score'>Deine Punkte: " + quiz.score + " von " + max + "</h2>";
 	
@@ -178,16 +166,16 @@ function showScore()
 	elem.innerHTML = end;
 	
 	var button = document.getElementById("answerButton");
+    button.checked = false;
 	button.onclick = function ()
 	{
 		showAnswers();
-	}
-	
+	}	
 };
 
 function showAnswers()
 {
-	var answers = "<h1>Lösungen</h1>"
+	var answers = "</div><h1>Lösungen</h1>"
 	var max = quiz.questions.length * 100;
 	answers += "<h2 id='score'>Deine Punkte: " + quiz.score + " von " + max + "</h2>";
 	var answerTableStart = "<table id='answerTable'><tr><td id='questionTD'>Frage</td><td>Deine Antwort</td><td>Richtige Antwort</td></tr>"
@@ -223,24 +211,9 @@ function color(table)
 	}
 };
 
-
-
 var choicesArr = [];
 
 var quiz = new Quiz(questions);
 
 fill();
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
