@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+        Episode VI
+	</title>
+	<link rel="stylesheet" type="text/css" href="./CSS/quiz_temp.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="grid">
+		<div id="quiz">
+						
+			<p id="question"></p>
+			<div class="space2"></div>
+			
+			<div id="buttons">
+				<input type="radio" id="qchoice01" name="qchoice">
+				<label for="qchoice01" id="choice01"></label>
+					<br>
+				<div class="space"></div>
+					<br>
+				<input type="radio" id="qchoice02" name="qchoice">
+				<label for="qchoice02" id="choice02"></label>
+					<br>
+				<div class="space"></div>
+					<br>
+				<input type="radio" id="qchoice03" name="qchoice">
+				<label for="qchoice03" id="choice03"></label>
+					<br>
+				<div class="space"></div>
+					<br>
+				<input type="radio" id="qchoice04" name="qchoice">
+				<label for="qchoice04" id="choice04"></label>
+					<br> 
+				<div class="space"></div>
+					<br>
+				<button id="check">
+					<span>Check</span>
+				</button>
+				
+				<button id="next">
+					<span class="choices" id="nextQ"></span>
+				</button>
+			</div>
+			
+			<p id="progress"></p>
+
+            <div class='space2'></div>
+		</div>
+	</div>
+
+	<div class='space'></div>
+
+	<script src="./javascript/script_rotj.js" type="module"></script>
+	
+</body>
+</html>
