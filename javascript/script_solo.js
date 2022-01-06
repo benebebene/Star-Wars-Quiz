@@ -1,4 +1,4 @@
-import {questions} from './questions/questions_rotj.js';
+import {questions} from './questions/questions_solo.js';
 
 function Quiz(questions)
 {

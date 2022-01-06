@@ -1,4 +1,4 @@
-import {questions} from './questions/questions_rotj.js';
+import {questions} from './questions/questions_ro.js';
 
 function Quiz(questions)
 {
@@ -194,6 +194,7 @@ function showAnswers()
 
     positionButton(document.getElementById("home"));
 	color(document.getElementById("answerTable"));
+    
 
 	var container = document.getElementsByClassName("vertical");
 	container.style.top = "80%";

@@ -63,7 +63,7 @@ var questions =
 					["Darth Talon",
 					"Darth Traya",
 					"Darth Sion",
-					"Dart Nihilus"],
+					"Darth Nihilus"],
 					decryptAnswer("U2FsdGVkX1+jldcYpxLEN5pnCqczZldKM0833Tk6UM8=")),
 		new Question("Wie hieß der Imperator des Sith-Imperiums?",
 					["Valorum",

@@ -178,6 +178,8 @@ function showAnswers()
 	var answers = "</div><h1>Lösungen</h1>"
 	var max = quiz.questions.length * 100;
 	answers += "<h2 id='score'>Deine Punkte: " + quiz.score + " von " + max + "</h2>";
+    var homeButton = "<a href='.\\index.html'><img id='home' src='./img/home.svg'></a>";
+    answers += homeButton;
 	var answerTableStart = "<table id='answerTable'><tr><td id='questionTD'>Frage</td><td>Deine Antwort</td><td>Richtige Antwort</td></tr>"
 	answers += answerTableStart;
 	for(var i = 0; i < choicesArr.length; i++)
@@ -190,6 +192,7 @@ function showAnswers()
 	var elem = document.getElementById("quiz");
 	elem.innerHTML = answers;
 
+    positionButton(document.getElementById("home"));
 	color(document.getElementById("answerTable"));
 
 	var container = document.getElementsByClassName("vertical");
@@ -209,6 +212,15 @@ function color(table)
 			document.getElementById("answerChoice0" + i).style.color = "red";
 		}	
 	}
+};
+
+function positionButton(button)
+{
+    button.style.width = "76px";
+    button.style.height = "80px";
+    button.style.position = "absolute";
+    button.style.left = "10%";
+    button.style.top = "10%";
 };
 
 var choicesArr = [];
